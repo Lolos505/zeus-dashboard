@@ -1,5 +1,3 @@
-// src/theme.js
-
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -11,8 +9,15 @@ const theme = createTheme({
     secondary: {
       main: '#ff2d55', // MacOS red
     },
+    success: {
+      main: '#4caf50', // Green for success indicators
+    },
     background: {
       default: '#f5f5f7', // Light grey background
+    },
+    text: {
+      primary: '#000000',
+      secondary: '#555555',
     },
   },
   typography: {
@@ -23,7 +28,7 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 12,
+          borderRadius: 2,
           boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)', // MacOS-style shadow
         },
       },
@@ -42,6 +47,13 @@ const theme = createTheme({
           backgroundColor: '#ffffff',
           color: '#000000',
           boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+        },
+      },
+    },
+    MuiSlider: {
+      styleOverrides: {
+        root: {
+          color: '#007aff',
         },
       },
     },

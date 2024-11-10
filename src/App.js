@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box, CircularProgress, Typography } from '@mui/material';
-import { Header, Footer, ElectricityDataDisplay, ElectricityChart } from './components';
+import { Header, Footer, ElectricityDataDisplay, ElectricityChart, ConsumptionOptimizer } from './components';
 import { countries } from './countries';
 
 function App() {
@@ -155,6 +155,8 @@ function App() {
                 No chart data available.
               </Typography>
             )}
+            {/* Integrate the Consumption Optimizer */}
+            <ConsumptionOptimizer />
           </>
         ) : (
           <Typography variant="h6" align="center" sx={{ mt: 4 }}>

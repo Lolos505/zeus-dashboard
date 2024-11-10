@@ -35,7 +35,7 @@ function ElectricityDataDisplay({ data, timeZone }) {
     : new Date(data.datetime);
 
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box>
       <Card
         sx={{
           borderRadius: 2,
@@ -68,7 +68,7 @@ function ElectricityDataDisplay({ data, timeZone }) {
               <Typography variant="subtitle1" sx={{ mr: 1 }}>
                 Country:
               </Typography>
-              <Typography variant="body1">{data.zone}</Typography>
+              <Typography variant="body1"><b>{data.zone}</b></Typography>
             </Box>
 
             {/* Carbon Intensity */}
@@ -84,7 +84,7 @@ function ElectricityDataDisplay({ data, timeZone }) {
                 Carbon Intensity:
               </Typography>
               <Typography variant="body1">
-                {data.carbonIntensity} gCO₂eq/kWh
+                <b>{data.carbonIntensity}</b> gCO₂eq/kWh
               </Typography>
             </Box>
 
@@ -101,9 +101,9 @@ function ElectricityDataDisplay({ data, timeZone }) {
                 Renewable Percentage:
               </Typography>
               <Typography variant="body1">
-                {data.renewablePercentage !== undefined
+                <b>{data.renewablePercentage !== undefined
                   ? `${data.renewablePercentage}%`
-                  : 'Data not available'}
+                  : 'Data not available'}</b>
               </Typography>
             </Box>
 
